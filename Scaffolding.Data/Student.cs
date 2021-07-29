@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
+
+namespace Scaffolding.Data
+{
+    public partial class Student
+    {
+        public Student()
+        {
+            StudentCourses = new HashSet<StudentCourse>();
+        }
+
+        public int StudentId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int DepartmentId { get; set; }
+
+        public virtual Department Department { get; set; }
+        public virtual StudentDetail StudentDetail { get; set; }
+        public virtual ICollection<StudentCourse> StudentCourses { get; set; }
+    }
+}

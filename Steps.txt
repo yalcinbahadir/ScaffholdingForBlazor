@@ -1,0 +1,9 @@
+1- Create a solution,
+2- Create a .NetFramework class library,
+3- Install packages: SqlServer, Tools,
+4- Open developer powershell (RMC on project --> Open in terminal)
+5- Execute following command with your connection string
+//Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=KalabaSchool;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+
+dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=KalabaSchool;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer
+6- You will get the entities and context class
